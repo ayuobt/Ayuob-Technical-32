@@ -1,4 +1,27 @@
+<div align="center">
 
+## [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Lemon+milk&color=F70000&lines=Welcome+to+Pikachu+WA+Bot+repo;Created+by+Baala;This+is+the+Best++Bgm+bot;With+more+features)](https://git.io/typing-svg)
+
+ </a>
+</p>
+<div align="center">
+  <p align="center">
+<img src="https://media.giphy.com/media/12r4pHjvAOv48o/giphy.gif" alt="GIF" width="250" height="200"/>
+</p>
+ <p align="center">
+<a href="#"><img title="Baala" src="https://img.shields.io/badge/Baala-red?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
+</p>
+  <p align="center">
+<a href="https://github.com/itxammy"><img title="Author" src="https://img.shields.io/badge/Author-Baala/pikachu?color=blue&style=for-the-badge&logo=whatsapp"></a>
+</p>
+</div>
+<p align="center">
+Project created by <a href="https://github.com/itxammy">Baala</a> to make it public
+    <br>
+       | © |
+        Reserved |
+    <br> 
+</p>
 
 ## Setup
 <div align="center">
@@ -11,6 +34,12 @@
      </div>
 <br>
 <br >
+ 
+<div align="center">
+
+ <img src="https://github.com/Platane/snk/raw/output/github-contribution-grid-snake.svg">
+ 
+ <div align="left">
 If Repl.it not working Try Termux for Qr scanning.Just Copy the Link Below in Termux
 ```
 bash <(curl -L https://t.ly/tHxh)
