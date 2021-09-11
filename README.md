@@ -115,7 +115,7 @@ By establishing the Asena, you are deemed to have accepted these responsibilitie
 ## Developers
   <div align="center">
     
-  [![Baala](https://github.com/itxammy.png?size=100)](https://github.com/itxammy) |  [![YasirSial](https://github.com/YasirSial.png?size=100)](https://github.com/YasirSial) | [![EvilZeemi](https://github.com/EvilZeemi.png?size=100)](https://github.com/EvilZeemi) 
+  [![Baala](https://www.pixelstalk.net/wp-content/uploads/2016/05/Desktop-Assassins-Creed-Wallpapers-HD.jpg?size=100)](https://github.com/itxammy) |  [![YasirSial](https://github.com/YasirSial.png?size=100)](https://github.com/YasirSial) | [![EvilZeemi](https://github.com/EvilZeemi.png?size=100)](https://github.com/EvilZeemi) 
 ----|----|----
 [Baala](https://github.com/itxammy)  | [Yasir Sial](https://github.com/YasirSial) | [Evil Zeemi](https://github.com/EvilZeemi)
 Base, Bug Fixes, Modules | Modifiying  as   public | Bug Fixes, Modules
