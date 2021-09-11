@@ -6,7 +6,7 @@
 </p>
 <div align="center">
   <p align="center">
-<img src="https://media.giphy.com/media/12r4pHjvAOv48o/giphy.gif" alt="GIF" width="250" height="200"/>
+<img src="https://media.giphy.com/media/RkDUnGLUeIASH7Mbiy/giphy.gif?cid=ecf05e47az5426ktb6ty7r9rq0cp62w1lq8iljxkm4a78txk&rid=giphy.gif&ct=g" alt="GIF" width="280" height="300"/>
 </p>
  <p align="center">
 <a href="#"><img title="Baala" src="https://img.shields.io/badge/Baala-red?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
