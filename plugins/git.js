@@ -11,7 +11,7 @@ Asena.addCommand({pattern: 'git', fromMe: false, desc: Lang.WP}, (async (message
     
     
    
-  r_text[0] = "https://www.pixelstalk.net/wp-content/uploads/2016/05/Amazing-spider-man-spiderman-webs-comics-video-superhero-wallpapers-768x480.jpg";
+  r_text[0] = "https://media.giphy.com/media/12r4pHjvAOv48o/giphy.gif";
     
     
     var i = Math.floor(1*Math.random())
