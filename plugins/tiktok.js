@@ -1,14 +1,14 @@
 /*codded by baala
 */
 
-const Amdi = require('../events');
+const Asena = require('../events');
 const {MessageType,Mimetype} = require('@adiwajshing/baileys');
 const Config = require('../config');
 const fs = require('fs');
 const https = require('https');
 const googleTTS = require('google-translate-tts');
 
-Amdi.applyCMD({pattern: 'tta (.*)', fromMe: false, dontAddCommandList: true }, (async (message, match) => {
+Asena.applyCMD({pattern: 'tta (.*)', fromMe: false, dontAddCommandList: true }, (async (message, match) => {
     if(match[1] === undefined || match[1] == "")
         return;
     
