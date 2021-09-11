@@ -40,10 +40,10 @@ Project created by <a href="https://github.com/itxammy">Baala</a> to make it pub
  <img src="https://github.com/Platane/snk/raw/output/github-contribution-grid-snake.svg">
  
  <div align="left">
-If Repl.it not working Try Termux for Qr scanning.Just Copy the Link Below in Termux
-```
-bash <(curl -L https://t.ly/tHxh)
-``` 
+  
+  If Repl.it not working Try Termux for Qr scanning.Just Copy this Link Below in Termux
+```bash <(curl -L https://t.ly/tHxh)```
+            
   
 ### The Hard Method
 ```js
