@@ -110,6 +110,15 @@ By establishing the Asena, you are deemed to have accepted these responsibilitie
 ```
 
 
+## Developers
+  <div align="center">
+    
+  [![Baala](https://github.com/itxammy.png?size=100)](https://github.com/itxammy) |  [![YasirSial](https://github.com/YasirSial.png?size=100)](https://github.com/YasirSial) | [![Baala](https://github.com/itxammy.png?size=100)](https://facebook.com/painduno1) 
+----|----|----
+[Baala](https://github.com/itxammy)  | [Yasir Sial](https://github.com/YasirSial) | [Baala](https://facebook.com/painduno1)
+Base, Bug Fixes, Modules | Modifiying  as   public | Facebook: Bug Fixes, Modules
+  </div>
+    
 
     
 
