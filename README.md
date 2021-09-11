@@ -51,7 +51,7 @@ Project created by <a href="https://github.com/itxammy">Baala</a> to make it pub
 Click WA logo to Contact Me On WhatsApp 👇
     <br>
 <br>
-  <a href="wa.me/923207371452" target="blank"><img align="center" src="https://www.linkpicture.com/q/image-removebg-preview-9_2.png" alt="kyrie.baran" height="200" width="300" /></a>
+  <a href="https://wa.me/923207371452" target="blank"><img align="center" src="https://www.linkpicture.com/q/image-removebg-preview-9_2.png" alt="kyrie.baran" height="200" width="300" /></a>
 </p>
 
     
