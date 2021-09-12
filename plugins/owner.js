@@ -6,47 +6,31 @@ Pikachu
 */
 
 const Asena = require('../events');
-const {MessageType} = require('@adiwajshing/baileys');
-const {spawnSync} = require('child_process');
-const Config = require('../config');
-const chalk = require('chalk');
+const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
+const axios = require('axios');
 
 const Language = require('../language');
-const Lang = Language.getString('system_stats');
+const Lang = Language.getString('wallpaper');
 
+Asena.addCommand({pattern: 'owner', fromMe: false, desc: Lang.WP}, (async (message, match) => {
 
-if (Config.WORKTYPE == 'private') {
+    var r_text = new Array ();
+    
+    
+   
+  r_text[0] = "https://www.pixelstalk.net/wp-content/uploads/2016/06/Thor-Backgrounds-For-Desktop.jpg";
+    
+    
+    var i = Math.floor(1*Math.random())
 
-    Asena.addCommand({pattern: 'owner', fromMe: true, desc: 'shows the detail of bot owner'}, (async (message, match) => {
+    var respoimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
 
-        if (message.jid === '15369524516-1612300121@g.us') {
+    await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: `*Vishnu Mkz*
+*owner number wa.me/923207381452*
+*Facebook  :  https://facebook.com/painduno1 *
+*Youtube : 
+*githublink       https://github.com/itxammy/pikachu*
 
-            return;
-        }
+`}) 
 
-        if (Config.PLK == 'default') {
-            await message.client.sendMessage(message.jid,'Pikachu Bot created by *Baala*' , MessageType.text);
-        }
-        else {
-            await message.client.sendMessage(message.jid,Config.PLK + 'created \n by \n *Baala*', MessageType.text);
-        }
-    }));
-}
-
-else if (Config.WORKTYPE == 'public') {
-
-    Asena.addCommand({pattern: 'owner', fromMe: false, desc: 'shows the detail of bot owner'}, (async (message, match) => {
-
-        if (message.jid === '54218542512-1612300121@g.us') {
-
-            return;
-        }
-
-        if (Config.PLK == 'default') {
-            await message.client.sendMessage(message.jid,'Pikachu Bot created by *Baala*' , MessageType.text);
-        }
-        else {
-            await message.client.sendMessage(message.jid,Config.PLK + '*Baala IS MY BOSS*', MessageType.text);
-        }
-    }));
-}
+}));
