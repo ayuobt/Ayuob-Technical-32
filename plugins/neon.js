@@ -16,7 +16,7 @@ if (Config.WORKTYPE == 'private') {
 
         var ttinullimage = await axios.get(`https://api.zeks.xyz/api/bneon?apikey=LVJsk3tIlDiQUa4AuncQAYe9XIp&text=${encodeURIComponent(match[1])}`, { responseType: 'arraybuffer' })
 
-        await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: '```Made by Luttappi🧞```' })
+        await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: '```Made by Baala🧞```' })
 
     }));
 }
