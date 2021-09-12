@@ -18,7 +18,7 @@ Asena.addCommand({pattern: 'owner', fromMe: false, desc: Lang.WP}, (async (messa
     
     
    
-  r_text[0] = "https://www.pixelstalk.net/wp-content/uploads/2016/06/Thor-Backgrounds-For-Desktop.jpg";
+  r_text[0] = "https://www.pixelstalk.net/wp-content/uploads/2016/06/Dark-Knight-Game-Photos-free-computer-desktop.jpg";
     
     
     var i = Math.floor(1*Math.random())
