@@ -4,11 +4,11 @@ const got = require('got');
 const fs = require('fs');
 const axios = require('axios');
 const { errorMessage, infoMessage } = require('../helpers');
-const IG_DESC = "Instagram Downloader"
+const IG_DESC = "Downloads Image/Video From Instagram"
 const NEED_WORD = "Must Enter a link"
-const FBDESC = "Facebook Downloader"
-const LOADING = "Downloading..."
-const NOT_FOUNDFB = "Not Found On Facebook"
+const FBDESC = "Downloads Video From FaceBook"
+const LOADING = "Downloading the Video..."
+const NOT_FOUNDFB = "Video Not Found"
 const CAPTION = "Caption"
 
 Asena.addCommand({ pattern: 'ig ?(.*)', fromMe: false, desc: IG_DESC}, async (message, match) => {
@@ -17,10 +17,10 @@ Asena.addCommand({ pattern: 'ig ?(.*)', fromMe: false, desc: IG_DESC}, async (me
 
     if (!userName) return await message.sendMessage(errorMessage(NEED_WORD))
 
-    await message.sendMessage(infoMessage("Post Downloading..."))
+    await message.sendMessage(infoMessage("Downloading the Post..."))
 
     await axios
-	.get(`https://api.xteam.xyz/dl/ig?url=${userName}&APIKEY=ab9942f95c09ca89`)
+      .get(`https://api-anoncybfakeplayer.herokuapp.com/igdown?url=${userName}`)
       .then(async (response) => {
         const {
           url,
@@ -31,18 +31,18 @@ Asena.addCommand({ pattern: 'ig ?(.*)', fromMe: false, desc: IG_DESC}, async (me
 
         const msg = `${type}`
 
-	 if (msg === 'image') { await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {quoted: message.data}, {
-          caption: "Copyright © 2021 | Baala"
+	 if (msg === 'image') { await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
+          caption: "Made By Baala"
         })}
 		 	 
-	if (msg === 'video') { await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {quoted: message.data}, {
-          caption: "Copyright © 2021 | Baala"
+	if (msg === 'video') { await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
+          caption: "Made By Baala"
         })}
 	
         
       })
       .catch(
-        async (err) => await message.sendMessage(errorMessage("Please enter Instagram link ")),
+        async (err) => await message.sendMessage(errorMessage("Invaild Link, Please Enter a Vaild Instagram Link")),
       )
   },
 )
@@ -59,7 +59,7 @@ Asena.addCommand({ pattern: 'fb ?(.*)', fromMe: false, desc: FBDESC }, async (me
     await message.sendMessage(infoMessage(LOADING))
 
     await axios
-	.get(`https://api.xteam.xyz/dl/fb?url=${userName}&APIKEY=ab9942f95c09ca89`)
+      .get(`https://videfikri.com/api/fbdl/?urlfb=${userName}`)
       .then(async (response) => {
         const {
           url,
@@ -70,8 +70,8 @@ Asena.addCommand({ pattern: 'fb ?(.*)', fromMe: false, desc: FBDESC }, async (me
 
         const msg = `*${CAPTION}*: ${judul}`
 
-        await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {quoted: message.data}, {
-          caption: "Copyright © 2021 | Baala"
+        await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
+          caption: "Made By Baala"
         })
       })
       .catch(
