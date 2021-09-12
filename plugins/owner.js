@@ -26,8 +26,8 @@ Asena.addCommand({pattern: 'owner', fromMe: false, desc: Lang.WP}, (async (messa
     var respoimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
 
     await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: `*Baala*
-*owner number wa.me/923207381452*
-*Facebook  :  https://facebook.com/painduno1 *
+owner name : *Baala*
+Partners : YasirSial : EvilZeemi *
 *Youtube : https://youtube.com/channel/UCukP4xTkzkJh_XOaLXZ4SZA
 *githublink :      https://github.com/itxammy/pikachu*
 
