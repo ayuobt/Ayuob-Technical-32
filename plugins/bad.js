@@ -56,16 +56,16 @@ if (Config.LANG == 'ES') ldc = '*Enlace Detectado!*'
 if (Config.LANG == 'UR') ldc = '*آپ کے میسج میں لنک موجود ہے جو یہاں بھیجنا منع ہے اس لیے آپ کو گروپ سے نکالا جاتا ہے*'
 Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
     if (therikick_var == 'true' && message.jid !== '905511384572-1616356915@g.us') {
-        let regex1 = new RegExp('thayoli')
-        let regex2 = new RegExp('Myre')
-        let regex3 = new RegExp('poorimone')
-        let regex4 = new RegExp('poor')
+        let regex1 = new RegExp('kutta')
+        let regex2 = new RegExp('kamina')
+        let regex3 = new RegExp('kanjar')
+        let regex4 = new RegExp('harami')
         let regex5 = new RegExp('https://chat.whatsapp.com/')
-        let regex6 = new RegExp('andi')
-        let regex7 = new RegExp('mmmmmmmmmmm')
-        let regex8 = new RegExp('umban')
-        let regex9 = new RegExp('oombi')
-        let regex10 = new RegExp('Myr')
+        let regex6 = new RegExp('randi')
+        let regex7 = new RegExp('gashti')
+        let regex8 = new RegExp('chod')
+        let regex9 = new RegExp('lun')
+        let regex10 = new RegExp('xxx')
         if (regex1.test(message.message)) {
             var us = await checkUsAdmin(message)
             var im = await checkImAdmin(message)
