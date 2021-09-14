@@ -46,7 +46,7 @@ if (cn.WORKTYPE == 'private') {
         if (!userName) return await message.client.sendMessage(message.jid, Tlang.NEED, MessageType.text)
         await message.client.sendMessage(message.jid, Tlang.DOWN, MessageType.text)
         await axios
-          .get(`https://api.lolhuman.xyz/api/tiktok3?apikey=}`)
+          .get('https://api.lolhuman.xyz/api/tiktok3?apikey=' + apikey.key + `&url=${tkurl}`)
           .then(async (response) => {
             const {
               data,
@@ -118,46 +118,59 @@ else if (cn.WORKTYPE == 'public') {
     /*
     Asena.addCommand({ pattern: 'tt ?(.*)', fromMe: false, desc: Tlang.TİKTOK }, async (message, match) => {
         const userName = match[1]
-        if (!userName) return await message.client.sendMessage(message.jid, Tlang.NEED, MessageType.text)
-        await message.client.sendMessage(message.jid, Tlang.DOWN, MessageType.text)
+      if (!tkurl) return await message.client.sendMessage(message.jid,Lang.NEED_WORD, {quoted: message.data});
+
+      var apikey = await QueenAmdi.api()
+    
         await axios
-          .get(`https://api.lolhuman.xyz/api/tiktok3?apikey=`)
+          .get('https://api.lolhuman.xyz/api/tiktok3?apikey=' + apikey.key + `&url=${tkurl}`)
           .then(async (response) => {
-            const {
-              server_1,
-            } = response.data
-            const profileBuffer = await axios.get(server_1, {
-              responseType: 'arraybuffer',
-            })
-            await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
-              caption: 'Made by WhatsAsena',
-            })
-          })
-          .catch(
-            async (err) => await message.client.sendMessage(message.jid, Tlang.NOT + userName, MessageType.text),
-          )
+              const {
+                result,
+                status,
+              } = response.data
+    
+              var downloading = await message.client.sendMessage(message.jid,Lang.DLOAD_TK,MessageType.text, {quoted: message.data});
+              const profileBuffer = await axios.get(result, {responseType: 'arraybuffer'})
+    
+              const msg = `${status}`
+    
+        if (msg === '500') { await message.client.sendMessage(message.jid,Lang.INVALID_TK,MessageType.text, {quoted: message.data})}
+              
+        if (msg === '200') {
+          var uploading = await message.client.sendMessage(message.jid,Lang.UPLOADING_TK,MessageType.text, {quoted: message.data});
+          await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true});
+          await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {caption: Config.CAP, quoted: message.data, thumbnail: thumb })
+          return await message.client.deleteMessage(message.jid, {id: uploading.key.id, remoteJid: message.jid, fromMe: true})
+          }})
       },
     )
     Asena.addCommand({ pattern: 'tt ?(.*)', fromMe: true, desc: Tlang.TİKTOK }, async (message, match) => {
-        const userName = match[1]
-        if (!userName) return await message.client.sendMessage(message.jid, Tlang.NEED, MessageType.text)
-        await message.client.sendMessage(message.jid, Tlang.DOWN, MessageType.text)
+      if (!tkurl) return await message.client.sendMessage(message.jid,Lang.NEED_WORD, {quoted: message.data});
+
+      var apikey = await QueenAmdi.api()
+    
         await axios
-          .get(`https://api.lolhuman.xyz/api/tiktok3?apikey=}`)
+          .get('https://api.lolhuman.xyz/api/tiktok3?apikey=' + apikey.key + `&url=${tkurl}`)
           .then(async (response) => {
-            const {
-              data,
-            } = response.data
-            const profileBuffer = await axios.get(data.mp4, {
-              responseType: 'arraybuffer',
-            })
-            await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
-              caption: 'Made by WhatsAsena',
-            })
-          })
-          .catch(
-            async (err) => await message.client.sendMessage(message.jid, Tlang.NOT + userName, MessageType.text),
-          )
+              const {
+                result,
+                status,
+              } = response.data
+    
+              var downloading = await message.client.sendMessage(message.jid,Lang.DLOAD_TK,MessageType.text, {quoted: message.data});
+              const profileBuffer = await axios.get(result, {responseType: 'arraybuffer'})
+    
+              const msg = `${status}`
+    
+        if (msg === '500') { await message.client.sendMessage(message.jid,Lang.INVALID_TK,MessageType.text, {quoted: message.data})}
+              
+        if (msg === '200') {
+          var uploading = await message.client.sendMessage(message.jid,Lang.UPLOADING_TK,MessageType.text, {quoted: message.data});
+          await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true});
+          await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {caption: Config.CAP, quoted: message.data, thumbnail: thumb })
+          return await message.client.deleteMessage(message.jid, {id: uploading.key.id, remoteJid: message.jid, fromMe: true})
+          }})
       },
     )
     */
