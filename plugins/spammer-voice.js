@@ -7,7 +7,7 @@ const cwebp = require('cwebp-bin');
 const Language = require('../language');
 const Lang = Language.getString('spammer');
 
-Asena.addCommand({pattern: 'audio spam$', fromMe: true, desc: Lang.AU_DESC}, (async (message, match) => {
+Asena.addCommand({pattern: 'voice spam$', fromMe: true, desc: Lang.AU_DESC}, (async (message, match) => {
     
     if (!message.reply_message) return await message.client.sendMessage(message.jid, Lang.AU_REP, MessageType.text);
 
@@ -24,7 +24,7 @@ Asena.addCommand({pattern: 'audio spam$', fromMe: true, desc: Lang.AU_DESC}, (as
         .save('output.mp3')
         .on('end', async () => {
             setInterval(async () => {
-                await message.sendMessage(fs.readFileSync('output.mp3'), MessageType.voice, {mimetype: Mimetype.mp4Audio});
+                await message.sendMessage(fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
             }, 200)
         });
 }));
