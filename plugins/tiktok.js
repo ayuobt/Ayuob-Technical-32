@@ -41,12 +41,12 @@ if (cn.WORKTYPE == 'private') {
     }));
 
     /*
-    Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true, desc: Tlang.TİKTOK }, async (message, match) => {
+    Asena.addCommand({ pattern: 'tt ?(.*)', fromMe: true, desc: Tlang.TİKTOK }, async (message, match) => {
         const userName = match[1]
         if (!userName) return await message.client.sendMessage(message.jid, Tlang.NEED, MessageType.text)
         await message.client.sendMessage(message.jid, Tlang.DOWN, MessageType.text)
         await axios
-          .get(`https://shinoa-rest.herokuapp.com/dl/tiktok?link=${userName}`)
+          .get(`https://api.lolhuman.xyz/api/tiktok3?apikey=}`)
           .then(async (response) => {
             const {
               data,
@@ -116,12 +116,12 @@ else if (cn.WORKTYPE == 'public') {
 
     }));
     /*
-    Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: false, desc: Tlang.TİKTOK }, async (message, match) => {
+    Asena.addCommand({ pattern: 'tt ?(.*)', fromMe: false, desc: Tlang.TİKTOK }, async (message, match) => {
         const userName = match[1]
         if (!userName) return await message.client.sendMessage(message.jid, Tlang.NEED, MessageType.text)
         await message.client.sendMessage(message.jid, Tlang.DOWN, MessageType.text)
         await axios
-          .get(`https://api.xteam.xyz/dl/tiktok?url=${userName}&APIKEY=ab9942f95c09ca89`)
+          .get(`https://api.lolhuman.xyz/api/tiktok3?apikey=`)
           .then(async (response) => {
             const {
               server_1,
@@ -138,12 +138,12 @@ else if (cn.WORKTYPE == 'public') {
           )
       },
     )
-    Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true, desc: Tlang.TİKTOK }, async (message, match) => {
+    Asena.addCommand({ pattern: 'tt ?(.*)', fromMe: true, desc: Tlang.TİKTOK }, async (message, match) => {
         const userName = match[1]
         if (!userName) return await message.client.sendMessage(message.jid, Tlang.NEED, MessageType.text)
         await message.client.sendMessage(message.jid, Tlang.DOWN, MessageType.text)
         await axios
-          .get(`https://shinoa-rest.herokuapp.com/dl/tiktok?link=${userName}`)
+          .get(`https://api.lolhuman.xyz/api/tiktok3?apikey=}`)
           .then(async (response) => {
             const {
               data,
