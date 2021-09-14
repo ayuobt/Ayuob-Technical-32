@@ -18,18 +18,20 @@ Asena.addCommand({pattern: 'owner', fromMe: false, desc: Lang.WP}, (async (messa
     
     
    
-  r_text[0] = "https://media4.giphy.com/media/XfzD4PfNXCrNvZ4rAy/giphy.webp?cid=6c09b952e075f6c5de8f09a3319632da4d497eac9337f871&rid=giphy.webp&ct=g";
+  r_text[0] = "https://www.pixelstalk.net/wp-content/uploads/images1/Robotech-Space-Backgrounds.jpg";
     
     
     var i = Math.floor(1*Math.random())
 
     var respoimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
 
-    await message.sendMessage(Buffer(respoimage.data), MessageType.gif, {mimetype: Mimetype.gif, caption: `*Baala*
-owner name : *Baala*
-Partners : YasirSial : EvilZeemi *
-*Youtube : https://youtube.com/channel/UCukP4xTkzkJh_XOaLXZ4SZA
-*githublink :      https://github.com/itxammy/pikachu*
+    await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: `*ඏ♚๖ۣۜ٘شَـــیٌـــط٘ــاَن༻࿌*
+Cᵣₑₐₜₒᵣ : ᗷᗩᗩᒪᗩ 
+þår†ñêr : ¥å§ïr §ïål
+ₚₐᵣₜₙₑᵣ : ₑᵥᵢₗ Zₑₑₘᵢ
+𝒫𝒶𝓇𝓉𝓃𝑒𝓇 : 𝑀𝒶𝒻𝒾𝒶 𝒜𝓃𝓊𝓂
+𝒫𝒶𝓇𝓉𝓃𝑒𝓇 : 𝐸𝓋𝒾𝓁 𝒵𝑒𝑒𝓂𝒾
+
 
 `}) 
 
