@@ -128,6 +128,14 @@ if (config.LANG == 'RU') {
     dlang_other = 'Другие языки'
     dlang_input = 'Обработанный текст:'
 }
+if (config.LANG == 'UR') {
+    dlang_dsc = 'جوابی پیغام کی زبان کا اندازہ لگائیں۔.'
+    closer_res = 'قریب ترین نتیجہ:'
+    dlang_lang = 'زبان:'
+    dlang_similarity = 'مماثلت۔:'
+    dlang_other = 'دوسری زبانیں'
+    dlang_input = 'عمل شدہ متن:'
+}
 
 
 if (config.WORKTYPE == 'private') {
@@ -207,6 +215,13 @@ if (config.WORKTYPE == 'private') {
         alr_off = '¡Antilink está cerrado actualmente!'
         succ_on = '¡Antilink se abrió con éxito!'
         succ_off = 'Antilink cerrado correctamente!'
+    }
+if (config.LANG == 'UR') {
+        l_dsc = 'اینٹی لنک ٹول کو فعال کرتا ہے۔.'
+        alr_on = 'اینٹی لنک پہلے ہی کھلا ہوا ہے!'
+        alr_off = 'اینٹ لنک فی الحال بند ہے!'
+        succ_on = 'اینٹی لنک کامیابی سے کھل گیا!'
+        succ_off = 'اینٹی لنک کامیابی سے بند!'
     }
     if (config.LANG == 'ID') {
         l_dsc = 'Mengaktifkan alat Antilink.'
@@ -475,7 +490,7 @@ if (config.WORKTYPE == 'private') {
                 writer.addTag();
 
                 reply = await message.client.sendMessage(message.jid,Lang.UPLOADING_SONG,MessageType.text);
-                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: false});
+                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
             });
     }));
 
