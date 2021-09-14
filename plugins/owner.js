@@ -28,9 +28,11 @@ Asena.addCommand({pattern: 'owner', fromMe: false, desc: Lang.WP}, (async (messa
     await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: `*ඏ♚๖ۣۜ٘شَـــیٌـــط٘ــاَن༻࿌*
 Cᵣₑₐₜₒᵣ : ᗷᗩᗩᒪᗩ 
 þår†ñêr : ¥å§ïr §ïål
-ₚₐᵣₜₙₑᵣ : ₑᵥᵢₗ Zₑₑₘᵢ
 𝒫𝒶𝓇𝓉𝓃𝑒𝓇 : 𝑀𝒶𝒻𝒾𝒶 𝒜𝓃𝓊𝓂
 𝒫𝒶𝓇𝓉𝓃𝑒𝓇 : 𝐸𝓋𝒾𝓁 𝒵𝑒𝑒𝓂𝒾
+Whatsapp : +92 3207371452
+Facebook : https://facebook.com/painduno1
+Youtube : https://youtube.com/channel/UCukP4xTkzkJh_XOaLXZ4SZA
 
 
 `}) 
