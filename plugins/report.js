@@ -16,15 +16,15 @@ const REPORT_DESC = "You can report someone who is acting against the rules of t
 const AAA = "*Report Accepted⚠⚠ * \ n✔_ Please wait while the admin notices_"
 const AAB = ", Unusual Activity Detected"
 const AAC = ", An inappropriate action has been taken.\n\n\n*********************************"
-const NEED_NUM = "*Give me a user!*\n_Mention the person you want or give the command as a reply to his message_✨\n\n  ᵇʸ ʜͥɪͭsᷤʜᴀͫᴍͤ"
+const NEED_NUM = "*Give me a user!*\n_Mention the person you want or give the command as a reply to his message_✨\n\n  ඏ♚๖ۣۜ٘شَـــیٌـــط٘ــاَن༻࿌"
 const REPORT = "⚠ @{} ⚠"
 
 const SEWA = "⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠\n\n         *❆❉☣REPORTED☣❉❆*\n      *❱❱❱A complaint has been received❰❰❰*\n         \n*to*:-"
-const SEWB = "\nකෙනා:-"
+const SEWB = "\Person:-"
 const SEWC = "\n\n\n*Reason*:-"
-const SEWD = "\n\n*കാരണം*:-"
+const SEWD = "\n\n*Cause*:-"
 const SEWE = "╔═══════════ೋೋ═══════════╗\n╠       ⚠⚠⚠*Report Detected*⚠⚠⚠\n\n"
-const SEWF = "\n╠           *👆👆Group Admins👆👆*                      \n╚═══════════ೋೋ═══════════╝\n\n_*Please have an admin for this*_\n_*Pay attention*_\n\n\n_*Coded By ʜͥɪͭsᷤʜᴀͫᴍͤ*_\n         *👑Sophia👑*\n\n⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠"
+const SEWF = "\n╠           *👆👆Group Admins👆👆*                      \n╚═══════════ೋೋ═══════════╝\n\n_*Please have an admin for this*_\n_*Pay attention*_\n\n\n_*Coded By Baala*_\n         *👑ඏ♚๖ۣۜ٘شَـــیٌـــط٘ــاَن༻࿌👑*\n\n⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠⚠"
 
 if (Config.WORKTYPE == 'private') {
 
