@@ -72,6 +72,14 @@ if (config.LANG == 'EN') {
     dlang_other = 'Other Languages'
     dlang_input = 'Processed Text:'
 }
+if (config.LANG == 'UR') {
+    dlang_dsc = 'جوابی پیغام کی زبان کا اندازہ لگائیں۔.'
+    closer_res = 'قریب ترین نتیجہ:'
+    dlang_lang = 'زبان:'
+    dlang_similarity = 'مماثلت:'
+    dlang_other = 'دیگر زبانیں'
+    dlang_input = 'پروسیسڈ ٹیکسٹ:'
+}
 if (config.LANG == 'AZ') {
     dlang_dsc = 'Cavablanan mesajın dilini təxmin edin.'
     closer_res = 'Ən yaxın nəticə:'
@@ -165,6 +173,13 @@ if (config.WORKTYPE == 'private') {
         alr_off = 'Antilink is currently closed!'
         succ_on = 'Antilink Opened Successfully!'
         succ_off = 'Antilink Closed Successfully!'
+    }
+if (config.LANG == 'UR') {
+        l_dsc = 'اینٹی لنک بحال کرتا ہے.'
+        alr_on = 'اینٹی لنک پہلے سے بحال ہے!'
+        alr_off = 'اینٹی لنک بحال نہیں ہے!'
+        succ_on = 'اینٹی لنک بحال کر دیا گیا ہے!'
+        succ_off = 'اینٹی لنک بند کر دیا گیا ہے!'
     }
     if (config.LANG == 'AZ') {
         l_dsc = 'Antilink alətini aktivləşdirir.'
@@ -262,6 +277,13 @@ if (config.WORKTYPE == 'private') {
         alr_off_bio = 'Autobio is currently closed!'
         succ_on_bio = 'Autobio Opened Successfully!'
         succ_off_bio = 'Autobio Closed Successfully!'
+    }
+if (config.LANG == 'UR') {
+        auto_dsc = 'آپ کے بائیو پر ٹائم سیٹ کرتا ہے!'
+        alr_on_bio = 'خود کار بائیو پہلے سے بحال ہے!'
+        alr_off_bio = 'خودکار بائیو فلحال بند ہے!'
+        succ_on_bio = 'خودکار بائیو بحال کر دیا گیا ہے!'
+        succ_off_bio = 'خودکار بائیو بند کر دیا گیا ہے!'
     }
     if (config.LANG == 'AZ') {
         auto_dsc = 'Bio-ya canlı saat əlavə et!'
