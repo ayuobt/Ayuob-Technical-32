@@ -13,11 +13,11 @@
             "required": true
         },
         "SUDO": {
-            "description": "Leave blank if you don't know how to use it! Sudo mode; Your number must be an international number. So you should have your number after the country code. Example: 1205xxxxxxxxx (USA number +1)",
+            "description": "To control your bot with your other numbers! Sudo mode; Your number must be an international number. So you should have your number after the country code. Example: 923xxxxxxxxx (PK number +92)",
             "required": false
         },
         "LANGUAGE": {
-            "description": "only english language is available",
+            "description": "english & urdu languages are available",
             "required": true,
             "value": "en"
         },
@@ -27,7 +27,7 @@
             "value": "true"
         },   
         "ANTİ_LİNK": {
-            "description": "Link Engelleme Sistemi. Link Blocking System.",
+            "description": "Link detection. Link Blocking System.",
             "required": true,
             "value": "false"
         },
@@ -37,12 +37,12 @@
             "value": "true"
         },  
          "THERI_KICK": {
-            "description": "THERI VILICHAL KICK IF TRUE , just keep it false as this option is under maintanance ",
+            "description": "BANNED WORD KICK IF TRUE , It will ban user if he uses banned words ",
             "required": true,
             "value": "false"
         },
         "AUTO_BİO": {
-            "description": "Duruma otomatik tarih ve zaman eklemek için true yapın. Set true for auto date, time in biography.",
+            "description": "Set true for auto date, time in biography.",
             "required": true,
             "value": "true"
         },
@@ -52,12 +52,12 @@
             "value": "default"
         },    
         "HANDLERS": {
-            "description": "Komutlar için. For commands.",
+            "description": "Symbols list. For commands.",
             "required": true,
             "value": "^[.!;]"
         },
         "FULL_EVA": {
-            "description": "Hesabınızı bir Chatbot'a Çevirin! Turn your account into a chatbot!",
+            "description": "Turn your account into a chatbot!",
             "required": true,
             "value": "false"
         },
@@ -67,7 +67,7 @@
             "value": "false"
         },
         "NO_LOG": {
-            "description": "Hata logu görmek istemiyorsanız true yapın. Set true if you don't want to see error log.",
+            "description": "Set true if you don't want to see error log.",
             "required": true,
             "value": "false"
         },
@@ -77,7 +77,7 @@
             "value": "false"
         },
         "SEND_READ": {
-            "description": "Görüldü atmak istiyorsanız true yazın. Write true if you want to throw seen.",
+            "description": "Write true if you want to throw seen.",
             "required": true,
             "value": "true"
         },
@@ -87,7 +87,7 @@
             "value": "PUBLIC BOT"
         },
         "HEROKU": {
-            "description": "Herokuda çalışıyorsa true yazın. If it is running in Heroku, type true.",
+            "description": "If it is running in Heroku, type true.",
             "required": true,
             "value": "true"
         },
@@ -97,16 +97,16 @@
             "value": "•━━━━╼⤏BAALA BOT⤎╾━━━•"
         },
         "HEROKU_API_KEY": {
-            "description": "Herokuda API Keyiniz. Heroku API Key.",
+            "description": "Heroku API Key.",
             "required": true
         },
         "MUTE_MESSAGE": {
-            "description": "Düzenlenebilir Mute Mesajı. Customizable Mute Message! Use => default, to change back.",
+            "description": "Customizable Mute Message! Use => default, to change back.",
             "required": false,
             "value": "default"
         },
         "BLOCK_CHAT": {
-            "description": "Choose in which chat the bot won't work there. Ex: 905xxxx && 905xxxx-1xxx or 905xxxx,905xxx...",
+            "description": "Choose in which chat the bot won't work there. Ex: 923xxxx && 923xxxx-1xxx or 923xxxx,923xxx...",
             "required": false,
             "value": "false"
         },
@@ -116,36 +116,36 @@
             "value": "hear me friends"
         },
         "UNMUTE_MESSAGE": {
-            "description": "Düzenlenebilir Unmute Mesajı. Customizable Unmute Message! Use => default, to change back.",
+            "description": "Customizable Unmute Message! Use => default, to change back.",
             "required": false,
             "value": "default"
         },
         "BLOCK_MESSAGE": {
-            "description": "Düzenlenebilir Block Mesajı. Customizable Block Message! Use => default, to change back.",
+            "description": "Customizable Block Message! Use => default, to change back.",
             "required": false,
             "value": "default"
         },
         "UNBLOCK_MESSAGE": {
-            "description": "Düzenlenebilir Unblock Mesajı. Customizable Unblock Message! Use => default, to change back.",
+            "description": "Customizable Unblock Message! Use => default, to change back.",
             "required": false,
             "value": "default"
         },
         "WORK_TYPE": {
             "description": "WhatsAsena Working Type. If you use “public”, everyone can use the bot. Else if you use “private”, only you can use your bot.",
             "required": true,
-            "value": "private"
+            "value": "public"
         },
         "HEROKU_APP_NAME": {
-            "description": "Herokuda uygulama adı. Heroku APP Name.",
+            "description": "Heroku APP Name.",
             "required": true
         },
         "DEBUG": {
-            "description": "Geliştiricilere özeldir.",
+            "description": "Exclusive for developers.",
             "required": true,
             "value": "false"
         },
         "REMOVE_BG_API_KEY": {
-            "description": "Fotoğrafların arkaplanını kaldırır. https://remove.bg",
+            "description": "Removes background for photos. For API signup here https://remove.bg",
             "required": false
         },
         "ALIVE_MESSAGE": {
@@ -189,21 +189,21 @@
             "value": "default"
         },
         "GAN_IMAGE": {
-            "description": "Gan Style eklentisi için resim bağlantısı yazın. Type image link for Gan Style plugin.",
+            "description": "Type image link for Gan Style plugin.",
             "required": true,
             "value": "https://i.hizliresim.com/loUtAb.jpg"
         },
         "TAG_REPLY": {
-            "description": "Enter jid of your number so that you get a audio reply when metioned example - 91xxxxxxxxxx@s.whatsapp.net - for india",
+            "description": "Enter jid of your number so that you get a audio reply when metioned example - 923xxxxxxxxx@s.whatsapp.net - for Pakistan",
             "required": false          
         },
         "NO_ONLINE": {
-            "description": "Çevrimiçi görünmek istemiyorsanız true yazın. Type true if you don't want to appear online.",
+            "description": "Type true if you don't want to appear online.",
             "required": false,
             "value": "true"
         },
         "COFFEEHOUSE_API_KEY": {
-            "description": "Pass This Step! - Bu Bölümü Geçin!",
+            "description": "Skip This Step!",
             "required": false,
             "value": "true"
         }
