@@ -1,12 +1,8 @@
 <div align="center">
 
-## [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Lemon+milk&color=F70000&lines=Welcome+to+Pikachu+WA+Bot+repo;Created+by+Baala;This+is+the+Best++Bgm+bot;With+more+features)](https://git.io/typing-svg)
-
- </a>
-</p>
+<a href="https://github.com/itxammy"><img src="https://fontmeme.com/permalink/210920/2ae6399b753c4a6e4d92490e52ae17fb.png" alt="google-font" border="0"></a>
 <div align="center">
-  <p align="center">
-<img src="https://media.giphy.com/media/DYRvM0GqrffqUmnFc6/giphy.gif?cid=ecf05e47fsbfzulqi37t2ju3xthpi2ogobfgw37t06ze77z1&rid=giphy.gif&ct=g" alt="GIF" width="350" height="330"/>
+        <img src="https://media.giphy.com/media/12r4pHjvAOv48o/giphy.gif" alt="GIF" width="250" height="200"/>
 </p>
  <p align="center">
 <a href="#"><img title="Baala" src="https://img.shields.io/badge/Baala-red?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
@@ -60,7 +56,7 @@ Click WA logo to join WhatsApp group 👇
 
   ### Simple Method
   
-[![Run on Repl.it](https://repl.it/badge/github/quiec/whatsAlfa)](https://replit.com/@itxammy/WhatsApp-Bot-By-Baala?v=1)
+[![Run on Repl.it](https://www.linkpicture.com/q/Untitled-3_10.jpg)](https://replit.com/@itxammy/WhatsApp-Bot-By-Baala?v=1)
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/itxammy/pikachu.git)
      </div>
