@@ -47,7 +47,7 @@ Project created by <a href="https://github.com/itxammy">Baala</a> to make it pub
 Click WA logo to join WhatsApp group 👇
     <br>
 <br>
-  <a href="https://chat.whatsapp.com/Ku4IhfE1cEC0dUvHowOnjy" target="blank"><img align="center" src="https://www.linkpicture.com/q/image-removebg-preview-9_2.png" alt="kyrie.baran" height="200" width="300" /></a>
+  <a href="https://chat.whatsapp.com/IDWUTLr72QZKXpJiznf4pb" target="blank"><img align="center" src="https://www.linkpicture.com/q/image-removebg-preview-9_2.png" alt="kyrie.baran" height="200" width="300" /></a>
 </p>
 
     
