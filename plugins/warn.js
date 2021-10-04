@@ -1,109 +1,24 @@
-/* Copyright (C) 2021 TERROR BOY
-.
+/* Copyright (C) 2021 Vai838.
 Licensed under the  GPL-3.0 License;
-you may not use this file except in
-compliance with the License.
-WhiteDevil - TERROR BOY
+you may not use this file except in compliance with the License.
+WhatsAsenaDuplicated
 */
 
 const Asena = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
-const Config = require('../config');
+const got = require('got');
 
 const Language = require('../language');
-const Lang = Language.getString('tagall');
+const Lang = Language.getString('weather');
 
-if (Config.WORKTYPE == 'private') {
-    Asena.addCommand({pattern: 'warn ?(.*)', fromMe: true, desc: Lang.WREPORT}, (async (message, match) => {
-        if (match[1] == '' && message.reply_message) {
-            let grup = await message.client.groupMetadata(message.jid);
-            var jids = [];
-            mesaj = '';
-            grup['participants'].map(async (uye) => {
-                if (uye.isAdmin) {
-                    mesaj += '@' + uye.id.split('@')[0] + ' ';
-                    jids.push(uye.id.replace('c.us', 's.whatsapp.net'));
-                }
-            });
-            await message.client.sendMessage(message.jid,Lang.WUSER + '@' + message.reply_message.jid.split('@')[0] , MessageType.extendedText, {contextInfo: {mentionedJid: jids}, previewType: 0})
-        
-        }
-        else if (match[1] !== '' && message.reply_message) {
-            let grup = await message.client.groupMetadata(message.jid);
-            var jids = [];
-            mesaj = '';
-            grup['participants'].map(async (uye) => {
-                if (uye.isAdmin) {
-                    mesaj += '@' + uye.id.split('@')[0] + ' ';
-                    jids.push(uye.id.replace('c.us', 's.whatsapp.net'));
-                }
-            });
-            await message.client.sendMessage(message.jid,Lang.WUSER + '@' + message.reply_message.jid.split('@')[0] + Lang.WREASON + `${match[1]}`, MessageType.extendedText, {contextInfo: {mentionedJid: jids}, previewType: 0})
-        }
-        else if (!message.reply_message) {
-            return message.client.sendMessage(message.jid,Lang.WREPLY, MessageType.text);
-        }
-    }));
-}
-else if (Config.WORKTYPE == 'public') {
-    Asena.addCommand({pattern: 'warn ?(.*)', fromMe: true, desc: Lang.WREPORT}, (async (message, match) => {
-        if (match[1] == '' && message.reply_message) {
-            let grup = await message.client.groupMetadata(message.jid);
-            var jids = [];
-            mesaj = '';
-            grup['participants'].map(async (uye) => {
-                if (uye.isAdmin) {
-                    mesaj += '@' + uye.id.split('@')[0] + ' ';
-                    jids.push(uye.id.replace('c.us', 's.whatsapp.net'));
-                }
-            });
-            await message.client.sendMessage(message.jid,Lang.WUSER + '@' + message.reply_message.jid.split('@')[0] , MessageType.extendedText, {contextInfo: {mentionedJid: jids}, previewType: 0})
-        
-        }
-        else if (match[1] !== '' && message.reply_message) {
-            let grup = await message.client.groupMetadata(message.jid);
-            var jids = [];
-            mesaj = '';
-            grup['participants'].map(async (uye) => {
-                if (uye.isAdmin) {
-                    mesaj += '@' + uye.id.split('@')[0] + ' ';
-                    jids.push(uye.id.replace('c.us', 's.whatsapp.net'));
-                }
-            });
-            await message.client.sendMessage(message.jid,Lang.WUSER + '@' + message.reply_message.jid.split('@')[0] + Lang.WREASON + `${match[1]}`, MessageType.extendedText, {contextInfo: {mentionedJid: jids}, previewType: 0})
-        }
-        else if (!message.reply_message) {
-            return message.client.sendMessage(message.jid,Lang.WREPLY, MessageType.text);
-        }
-    }));
-    Asena.addCommand({pattern: 'warn ?(.*)', fromMe: true, desc: Lang.WREPORT, dontAddCommandList: true}, (async (message, match) => {
-        if (match[1] == '' && message.reply_message) {
-            let grup = await message.client.groupMetadata(message.jid);
-            var jids = [];
-            mesaj = '';
-            grup['participants'].map(async (uye) => {
-                if (uye.isAdmin) {
-                    mesaj += '@' + uye.id.split('@')[0] + ' ';
-                    jids.push(uye.id.replace('c.us', 's.whatsapp.net'));
-                }
-            });
-            await message.client.sendMessage(message.jid,Lang.WUSER + '@' + message.reply_message.jid.split('@')[0] , MessageType.extendedText, {contextInfo: {mentionedJid: jids}, previewType: 0})
-        
-        }
-        else if (match[1] !== '' && message.reply_message) {
-            let grup = await message.client.groupMetadata(message.jid);
-            var jids = [];
-            mesaj = '';
-            grup['participants'].map(async (uye) => {
-                if (uye.isAdmin) {
-                    mesaj += '@' + uye.id.split('@')[0] + ' ';
-                    jids.push(uye.id.replace('c.us', 's.whatsapp.net'));
-                }
-            });
-            await message.client.sendMessage(message.jid,Lang.WUSER + '@' + message.reply_message.jid.split('@')[0] + Lang.WREASON + `${match[1]}`, MessageType.extendedText, {contextInfo: {mentionedJid: jids}, previewType: 0})
-        }
-        else if (!message.reply_message) {
-            return message.client.sendMessage(message.jid,Lang.WREPLY, MessageType.text);
-        }
-    }));
-}
+Asena.addCommand({pattern: 'warn ?(.*)', fromMe: false, desc: Lang.EVINS_DESC}, async (message, match) => {
+	if (match[1] === 'xx') return await message.reply(Lang.NEED_LOCATIONA);
+	const url = `https://evilinsult.com/generate_insult.php?lang=en&type=json`;
+	try {
+		const response = await got(url);
+		const json = JSON.parse(response.body);
+		if (response.statusCode === 200) return await message.client.sendMessage(message.jid, '\n\n *warn : ⚠️ ' + Lang.EVINS +'* ```' + json.insult + '```\n\n', MessageType.text);
+	} catch {
+		return await message.client.sendMessage(message.jid, Lang.NOT_FOUNDAC, MessageType.text);
+	}
+});
