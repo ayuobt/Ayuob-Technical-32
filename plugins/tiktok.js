@@ -1,177 +1,105 @@
-/* Codded by @phaticusthiccy
-Telegram: t.me/phaticusthiccy
-Instagram: www.instagram.com/kyrie.baran
-*/
+const Asena = require("../Utilis/events");
+const { MessageType } = require("@adiwajshing/baileys");
+const { getJson, TiktokDownloader } = require("../Utilis/download");
+const { UploadToImgur, wallpaper, forward } = require("../Utilis/Misc");
+const Language = require("../language");
+const Lang = Language.getString("tiktok");
+Asena.addCommand(
+  { pattern: "tiktok ?(.*)", fromMe: true, desc: Lang.TIKTOK_DESC },
+  async (message, match) => {
+    match = !message.reply_message ? match : message.reply_message.text;
+    if (match == "")
+      return await message.sendMessage(Lang.NEED_REPLY, {
+        quoted: message.data,
+      });
+    let link = await TiktokDownloader(match);
+    if (!link)
+      return await message.sendMessage(Lang.INVALID, {
+        quoted: message.data,
+      });
+    let { buffer } = await getBuffer(link);
+    return await message.sendMessage(buffer, {}, MessageType.video);
+  }
+);
 
-const Asena = require('../events')
-const { MessageType } = require('@adiwajshing/baileys')
-const axios = require('axios')
-const cn = require('../config');
+Asena.addCommand(
+  { pattern: "movie ?(.*)", fromMe: true, desc: Lang.MOVIE_DESC },
+  async (message, match) => {
+    if (match === "")
+      return await message.sendMessage(Lang.NEED_NAME, {
+        quoted: message.data,
+      });
+    let url = `http://www.omdbapi.com/?apikey=742b2d09&t=${match}&plot=full`;
+    const json = await getJson(url);
+    if (json.Response != "True")
+      return await message.sendMessage(Lang.NOT_FOUND, {
+        quoted: message.data,
+      });
+    let msg = "";
+    msg += "```Title      : " + json.Title + "\n\n";
+    msg += "Year       : " + json.Year + "\n\n";
+    msg += "Rated      : " + json.Rated + "\n\n";
+    msg += "Released   : " + json.Released + "\n\n";
+    msg += "Runtime    : " + json.Runtime + "\n\n";
+    msg += "Genre      : " + json.Genre + "\n\n";
+    msg += "Director   : " + json.Director + "\n\n";
+    msg += "Writer     : " + json.Writer + "\n\n";
+    msg += "Actors     : " + json.Actors + "\n\n";
+    msg += "Plot       : " + json.Plot + "\n\n";
+    msg += "Language   : " + json.Language + "\n\n";
+    msg += "Country    : " + json.Country + "\n\n";
+    msg += "Awards     : " + json.Awards + "\n\n";
+    msg += "BoxOffice  : " + json.BoxOffice + "\n\n";
+    msg += "Production : " + json.Production + "\n\n";
+    msg += "imdbRating : " + json.imdbRating + "\n\n";
+    msg += "imdbVotes  : " + json.imdbVotes + "```";
+    return await message.sendMessage(msg);
+  }
+);
 
-const Language = require('../language')
-const { errorMessage, infoMessage } = require('../helpers')
-const Lang = Language.getString('instagram')
-const Tlang = Language.getString('tiktok')
+Asena.addCommand(
+  { pattern: "forward ?(.*)", fromMe: true, desc: Lang.FORWARD_DESC },
+  async (message, match) => {
+    if (match == "") return await message.sendMessage(Lang.JID);
+    if (!message.reply_message) return await message.sendMessage(Lang.FORWARD);
+    if (match.length > 30) return await message.sendMessage("*Check jid*");
+    const { jid, buffer, type, options } = await forward(match, message);
+    return await message.client.sendMessage(jid, buffer, type, options);
+  }
+);
 
-if (cn.WORKTYPE == 'private') {
+Asena.addCommand(
+  {
+    pattern: "wallpaper ?(.*)",
+    fromMe: true,
+    desc: Lang.WALLPAPER_DESC,
+  },
+  async (message, match) => {
+    if (match == "") return message.sendMessage(Lang.NEED_NAME);
+    let buffer = await wallpaper(match);
+    if (!buffer) return await message.sendMessage(Lang.NOT_FOUND);
+    return await message.sendMessage(
+      buffer,
+      { quoted: message.data },
+      MessageType.image
+    );
+  }
+);
 
-    Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true, desc: Lang.DESC }, (async (message, match) => {
-        if (match[0].includes('install')) return;
-        if (match[1] === '') return await message.client.sendMessage(message.jid, Lang.NEED_WORD, MessageType.text, { quoted: message.data });
-        if (!match[1].includes('www.instagram.com')) return await message.client.sendMessage(message.jid, Lang.NEED_WORD, MessageType.text, { quoted: message.data });
-	
-        let urls = `https://api.xteam.xyz/dl/ig?url=${match[1]}&APIKEY=ab9942f95c09ca89`
-        let response
-        try { response = await got(urls) } catch { return await message.client.sendMessage(message.jid, Lang.FİX, MessageType.text, { quoted: message.data });
-        }
-        const json = JSON.parse(response.body);
-
-        if (json.status === false) return await message.client.sendMessage(message.jid, Lang.NOT_FOUND, MessageType.text, { quoted: message.data });
-        if (json.code === 403) return await message.client.sendMessage(message.jid, '```API Error!```', MessageType.text, { quoted: message.data });
-
-        await message.client.sendMessage(message.jid, Tlang.DOWN, MessageType.text, { quoted: message.data });
-
-        let url = json.result.data[0].data;
-        let name = json.result.data[0].type;
-        await axios({ method: "get", url, headers: { 'DNT': 1, 'Upgrade-Insecure-Request': 1 }, responseType: 'arraybuffer'}).then(async (res) => {
-            if (name === 'video') { return await message.sendMessage(Buffer(res.data), MessageType.video, { caption: '*' + Tlang.USERNAME + '* ' + json.result.username + '\n*' + Tlang.LİNK + '* ' + 'http://instagram.com/' + json.result.username + '\n*' + Tlang.CAPTİON + '* ' + json.result.caption }) } else { return await message.sendMessage(Buffer(res.data), MessageType.image, { caption: '*' + Tlang.USERNAME + '* ' + json.result.username + '\n*' + Tlang.LİNK + '* ' + 'http://instagram.com/' + json.result.username + '\n*' + Tlang.CAPTİON + '* ' + json.result.caption });
-            }
-        });
-
-    }));
-
-    /*
-    Asena.addCommand({ pattern: 'tt ?(.*)', fromMe: true, desc: Tlang.TİKTOK }, async (message, match) => {
-        const userName = match[1]
-        if (!userName) return await message.client.sendMessage(message.jid, Tlang.NEED, MessageType.text)
-        await message.client.sendMessage(message.jid, Tlang.DOWN, MessageType.text)
-        await axios
-          .get('https://api.lolhuman.xyz/api/tiktok3?apikey=' + apikey.key + `&url=${tkurl}`)
-          .then(async (response) => {
-            const {
-              data,
-            } = response.data
-            const profileBuffer = await axios.get(data.mp4, {
-              responseType: 'arraybuffer',
-            })
-            await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
-              caption: 'Made by WhatsAsena',
-            })
-          })
-          .catch(
-            async (err) => await message.client.sendMessage(message.jid, Tlang.NOT + userName, MessageType.text),
-          )
-      },
+Asena.addCommand(
+  { pattern: "url", fromMe: true, desc: Lang.URL_DESC },
+  async (message, match) => {
+    if (
+      !message.reply_message ||
+      (!message.reply_message.image && !message.reply_message.video)
     )
-    */
-}
-else if (cn.WORKTYPE == 'public') {
-
-    Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: false, desc: Lang.DESC }, (async (message, match) => {
-        if (match[0].includes('install')) return;
-        if (match[1] === '') return await message.client.sendMessage(message.jid, Lang.NEED_WORD, MessageType.text, { quoted: message.data });
-        if (!match[1].includes('www.instagram.com')) return await message.client.sendMessage(message.jid, Lang.NEED_WORD, MessageType.text, { quoted: message.data });
-	
-        let urls = `https://api.xteam.xyz/dl/ig?url=${match[1]}&APIKEY=ab9942f95c09ca89`
-        let response
-        try { response = await got(urls) } catch { return await message.client.sendMessage(message.jid, Lang.FİX, MessageType.text, { quoted: message.data });
-        }
-        const json = JSON.parse(response.body);
-
-        if (json.status === false) return await message.client.sendMessage(message.jid, Lang.NOT_FOUND, MessageType.text, { quoted: message.data });
-        if (json.code === 403) return await message.client.sendMessage(message.jid, '```API Error!```', MessageType.text, { quoted: message.data });
-
-        await message.client.sendMessage(message.jid, Tlang.DOWN, MessageType.text, { quoted: message.data });
-
-        let url = json.result.data[0].data;
-        let name = json.result.data[0].type;
-        await axios({ method: "get", url, headers: { 'DNT': 1, 'Upgrade-Insecure-Request': 1 }, responseType: 'arraybuffer'}).then(async (res) => {
-            if (name === 'video') { return await message.sendMessage(Buffer(res.data), MessageType.video, { caption: '*' + Tlang.USERNAME + '* ' + json.result.username + '\n*' + Tlang.LİNK + '* ' + 'http://instagram.com/' + json.result.username + '\n*' + Tlang.CAPTİON + '* ' + json.result.caption }) } else { return await message.sendMessage(Buffer(res.data), MessageType.image, { caption: '*' + Tlang.USERNAME + '* ' + json.result.username + '\n*' + Tlang.LİNK + '* ' + 'http://instagram.com/' + json.result.username + '\n*' + Tlang.CAPTİON + '* ' + json.result.caption });
-            }
-        });
-
-    }));
-    Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true, desc: Lang.DESC, dontAddCommandList: true }, (async (message, match) => {
-        if (match[0].includes('install')) return;
-        if (match[1] === '') return await message.client.sendMessage(message.jid, Lang.NEED_WORD, MessageType.text, { quoted: message.data });
-        if (!match[1].includes('www.instagram.com')) return await message.client.sendMessage(message.jid, Lang.NEED_WORD, MessageType.text, { quoted: message.data });
-	
-        let urls = `https://api.xteam.xyz/dl/ig?url=${match[1]}&APIKEY=ab9942f95c09ca89`
-        let response
-        try { response = await got(urls) } catch { return await message.client.sendMessage(message.jid, Lang.FİX, MessageType.text, { quoted: message.data });
-        }
-        const json = JSON.parse(response.body);
-
-        if (json.status === false) return await message.client.sendMessage(message.jid, Lang.NOT_FOUND, MessageType.text, { quoted: message.data });
-        if (json.code === 403) return await message.client.sendMessage(message.jid, '```API Error!```', MessageType.text, { quoted: message.data });
-
-        await message.client.sendMessage(message.jid, Tlang.DOWN, MessageType.text, { quoted: message.data });
-
-        let url = json.result.data[0].data;
-        let name = json.result.data[0].type;
-        await axios({ method: "get", url, headers: { 'DNT': 1, 'Upgrade-Insecure-Request': 1 }, responseType: 'arraybuffer'}).then(async (res) => {
-            if (name === 'video') { return await message.sendMessage(Buffer(res.data), MessageType.video, { caption: '*' + Tlang.USERNAME + '* ' + json.result.username + '\n*' + Tlang.LİNK + '* ' + 'http://instagram.com/' + json.result.username + '\n*' + Tlang.CAPTİON + '* ' + json.result.caption }) } else { return await message.sendMessage(Buffer(res.data), MessageType.image, { caption: '*' + Tlang.USERNAME + '* ' + json.result.username + '\n*' + Tlang.LİNK + '* ' + 'http://instagram.com/' + json.result.username + '\n*' + Tlang.CAPTİON + '* ' + json.result.caption });
-            }
-        });
-
-    }));
-    /*
-    Asena.addCommand({ pattern: 'tt ?(.*)', fromMe: false, desc: Tlang.TİKTOK }, async (message, match) => {
-        const userName = match[1]
-      if (!tkurl) return await message.client.sendMessage(message.jid,Lang.NEED_WORD, {quoted: message.data});
-
-      var apikey = await QueenAmdi.api()
-    
-        await axios
-          .get('https://api.lolhuman.xyz/api/tiktok3?apikey=' + apikey.key + `&url=${tkurl}`)
-          .then(async (response) => {
-              const {
-                result,
-                status,
-              } = response.data
-    
-              var downloading = await message.client.sendMessage(message.jid,Lang.DLOAD_TK,MessageType.text, {quoted: message.data});
-              const profileBuffer = await axios.get(result, {responseType: 'arraybuffer'})
-    
-              const msg = `${status}`
-    
-        if (msg === '500') { await message.client.sendMessage(message.jid,Lang.INVALID_TK,MessageType.text, {quoted: message.data})}
-              
-        if (msg === '200') {
-          var uploading = await message.client.sendMessage(message.jid,Lang.UPLOADING_TK,MessageType.text, {quoted: message.data});
-          await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true});
-          await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {caption: Config.CAP, quoted: message.data, thumbnail: thumb })
-          return await message.client.deleteMessage(message.jid, {id: uploading.key.id, remoteJid: message.jid, fromMe: true})
-          }})
-      },
-    )
-    Asena.addCommand({ pattern: 'tt ?(.*)', fromMe: true, desc: Tlang.TİKTOK }, async (message, match) => {
-      if (!tkurl) return await message.client.sendMessage(message.jid,Lang.NEED_WORD, {quoted: message.data});
-
-      var apikey = await QueenAmdi.api()
-    
-        await axios
-          .get('https://api.lolhuman.xyz/api/tiktok3?apikey=' + apikey.key + `&url=${tkurl}`)
-          .then(async (response) => {
-              const {
-                result,
-                status,
-              } = response.data
-    
-              var downloading = await message.client.sendMessage(message.jid,Lang.DLOAD_TK,MessageType.text, {quoted: message.data});
-              const profileBuffer = await axios.get(result, {responseType: 'arraybuffer'})
-    
-              const msg = `${status}`
-    
-        if (msg === '500') { await message.client.sendMessage(message.jid,Lang.INVALID_TK,MessageType.text, {quoted: message.data})}
-              
-        if (msg === '200') {
-          var uploading = await message.client.sendMessage(message.jid,Lang.UPLOADING_TK,MessageType.text, {quoted: message.data});
-          await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true});
-          await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {caption: Config.CAP, quoted: message.data, thumbnail: thumb })
-          return await message.client.deleteMessage(message.jid, {id: uploading.key.id, remoteJid: message.jid, fromMe: true})
-          }})
-      },
-    )
-    */
-}
+      return await message.sendMessage(Lang.URL_NEED_REPLY);
+    if (message.reply_message.length > 10)
+      return await message.sendMessage("*Only accept below 10 MB*");
+    let location = await message.reply_message.downloadAndSaveMediaMessage(
+      "url"
+    );
+    let url = await UploadToImgur(location);
+    return await message.sendMessage(url, { quoted: message.data });
+  }
+);
