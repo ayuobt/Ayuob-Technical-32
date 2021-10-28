@@ -5,14 +5,14 @@
         <img src="https://media.giphy.com/media/12r4pHjvAOv48o/giphy.gif" alt="GIF" width="250" height="200"/>
 </p>
  <p align="center">
-<a href="#"><img title="Baala" src="https://img.shields.io/badge/Baala-red?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
+<a href="#"><img title="Ayuob Technical" src="https://img.shields.io/badge/Baala-red?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
 </p>
   <p align="center">
-<a href="https://facebook.com/painduno1"><img title="Author" src="https://img.shields.io/badge/Author-baala-shetan/pikachu?color=blue&style=for-the-badge&logo=facebook"></a>
+<a href="https://https://www.youtube.com/channel/UCELfhw309eQZ-vDmIh_xE2w"><img title="Author" src="https://img.shields.io/badge/Author-baala-shetan/pikachu?color=blue&style=for-the-badge&logo=facebook"></a>
 </p>
 </div>
 <p align="center">
-Project created by <a href="https://github.com/itxammy">Baala</a> to make it public
+Project created by <a href="https://github.com/itxammy">Ayuob Technical</a> to make it public
     <br>
        | © |
         Reserved |
@@ -23,13 +23,13 @@ Project created by <a href="https://github.com/itxammy">Baala</a> to make it pub
 
 <h3 align="center">Contact Me:</h3>
 <p align="center">
-<a href="https://www.facebook.com/painduno1" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/facebook.svg" alt="kyrie.baran" height="30" width="40" /></a>
+<a href="https://www.youtube.com/channel/UCELfhw309eQZ-vDmIh_xE2w" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/facebook.svg" alt="kyrie.baran" height="30" width="40" /></a>
 </p>
-<a href="https://wa.me/923207371452" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/whatsapp.svg" alt="kyrie.baran" height="30" width="40" /></a>
+<a href="https://wa.me/923053240615" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/whatsapp.svg" alt="kyrie.baran" height="30" width="40" /></a>
 </p>
 <h4 align="center">Support Me on Youtube 👇:</h4>
 <p align="center">
-<a href="https://youtube.com/channel/UCukP4xTkzkJh_XOaLXZ4SZA" target="blank"><img align="center" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/1200px-Logo_of_YouTube_%282015-2017%29.svg.png" height="45" width="90" /></a>
+<a href="https://www.youtube.com/channel/UCELfhw309eQZ-vDmIh_xE2w" target="blank"><img align="center" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/1200px-Logo_of_YouTube_%282015-2017%29.svg.png" height="45" width="90" /></a>
 </p>
   
 
@@ -42,12 +42,12 @@ Project created by <a href="https://github.com/itxammy">Baala</a> to make it pub
 
 
 ##
-  <h3 align="center">📢 Whatsapp Group :</h3>
+  <h3 align="center">📢 Subscribe My Channel :</h3>
 <p align="center">
-Click WA logo to join WhatsApp group 👇
+Click WA logo to join Youtube Channel 👇
     <br>
 <br>
-  <a href="https://chat.whatsapp.com/IDWUTLr72QZKXpJiznf4pb" target="blank"><img align="center" src="https://www.linkpicture.com/q/image-removebg-preview-9_2.png" alt="kyrie.baran" height="200" width="300" /></a>
+  <a href="https://www.youtube.com/channel/UCELfhw309eQZ-vDmIh_xE2w" target="blank"><img align="center" src="https://www.linkpicture.com/q/image-removebg-preview-9_2.png" alt="kyrie.baran" height="200" width="300" /></a>
 </p>
 
     
@@ -111,7 +111,7 @@ By establishing the Asena, you are deemed to have accepted these responsibilitie
 ## Developers
   <div align="center">
     
-  [![Baala](https://github.com/itxammy.png?size=100)](https://github.com/itxammy) |  [![YasirSial](https://github.com/YasirSial.png?size=100)](https://github.com/YasirSial) | [![EvilZeemi](https://github.com/EvilZeemi.png?size=100)](https://github.com/EvilZeemi) 
+  [![Ayuob Technical](https://github.com/itxammy.png?size=100)](https://github.com/itxammy) |  [![YasirSial](https://github.com/YasirSial.png?size=100)](https://github.com/YasirSial) | [![EvilZeemi](https://github.com/EvilZeemi.png?size=100)](https://github.com/EvilZeemi) 
 ----|----|----
 [Baala](https://github.com/itxammy)  | [Yasir Sial](https://github.com/YasirSial) | [Evil Zeemi](https://github.com/EvilZeemi)
 Base, Bug Fixes, Modules | Modifiying  as   public | Bug Fixes, Modules
