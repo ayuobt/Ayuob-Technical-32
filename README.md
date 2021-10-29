@@ -5,7 +5,7 @@
         <img src="https://media.giphy.com/media/12r4pHjvAOv48o/giphy.gif" alt="GIF" width="250" height="200"/>
 </p>
  <p align="center">
-<a href="#"><img title="Ayuob Technical" src="https://img.shields.io/badge/Baala-red?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
+<a href="#"><img title="Ayuob Technical" src="https://img.shields.io/badge/Ayuob Technical-red?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
 </p>
   <p align="center">
 <a href="https://https://www.youtube.com/channel/UCELfhw309eQZ-vDmIh_xE2w"><img title="Author" src="https://img.shields.io/badge/Author-baala-shetan/pikachu?color=blue&style=for-the-badge&logo=facebook"></a>
