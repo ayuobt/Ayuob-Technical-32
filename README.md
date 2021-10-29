@@ -2,7 +2,7 @@
 
 <a href="https://github.com/itxammy"><img src="https://fontmeme.com/permalink/210920/2ae6399b753c4a6e4d92490e52ae17fb.png" alt="google-font" border="0"></a>
 <div align="center">
-        <img src="https://media.giphy.com/media/12r4pHjvAOv48o/giphy.gif" alt="GIF" width="250" height="200"/>
+        <img src="content://media/external/downloads/40666" alt="GIF" width="250" height="200"/>
 </p>
  <p align="center">
 <a href="#"><img title="Ayuob Technical" src="https://img.shields.io/badge/Ayuob Technical-red?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
