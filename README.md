@@ -8,7 +8,7 @@
 <a href="#"><img title="Ayuob Technical" src="https://img.shields.io/badge/Ayuob Technical-red?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
 </p>
   <p align="center">
-<a href="https://https://www.youtube.com/channel/UCELfhw309eQZ-vDmIh_xE2w"><img title="Author" src="https://img.shields.io/badge/Author-baala-shetan/pikachu?color=blue&style=for-the-badge&logo=facebook"></a>
+<a href="https://https://www.youtube.com/channel/UCELfhw309eQZ-vDmIh_xE2w"><img title="Author" src="https://img.shields.io/badge/Author-Ayuob Technical/pikachu?color=blue&style=for-the-badge&logo=facebook"></a>
 </p>
 </div>
 <p align="center">
