@@ -44,7 +44,7 @@ Project created by <a href="https://github.com/itxammy">Ayuob Technical</a> to m
 ##
   <h3 align="center">📢 Subscribe My Channel :</h3>
 <p align="center">
-Click WA logo to join Youtube Channel 👇
+Click WA logo to Subscribe Channel 👇
     <br>
 <br>
   <a href="https://www.youtube.com/channel/UCELfhw309eQZ-vDmIh_xE2w" target="blank"><img align="center" src="https://www.linkpicture.com/q/image-removebg-preview-9_2.png" alt="kyrie.baran" height="200" width="300" /></a>
