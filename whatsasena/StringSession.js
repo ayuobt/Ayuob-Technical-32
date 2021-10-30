@@ -15,7 +15,7 @@ class StringSession {
     deCrypt(string = undefined) {
         if ('ASENA_SESSION' in process.env && string === undefined) {
             string = process.env.STRING_SESSION;
-        } else if (string !== undefined) {
+        } else if (string !== unf Ayuob Technical) {
             if (fs.existsSync(string)) {
                 string = fs.readFileSync(string, {encoding:'utf8', flag:'r'});
             }
