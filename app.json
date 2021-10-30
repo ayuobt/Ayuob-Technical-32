@@ -1,6 +1,6 @@
 {
-    "name": "Pikachu BY Baala",
-    "description": "pikachu bot - created by baala. World’s first UserBot made for WhatsApp.",
+    "name": "Ayuob BY Technical",
+    "description": "pikachu bot - created by Ayuob Technical>. World’s first UserBot made for WhatsApp.",
     "logo": "https://raw.githubusercontent.com/itxammy/pikachu/master/Pikachu-407x400.png",
     "keywords": ["whatsapp", "userbot", "Asena", "WhatsAsena", "bot", "api", "ai"],
     "repository": "https://github.com/itxammy/pikachu",
@@ -131,7 +131,7 @@
             "value": "default"
         },
         "WORK_TYPE": {
-            "description": "WhatsAsena Working Type. If you use “public”, everyone can use the bot. Else if you use “private”, only you can use your bot.",
+            "description": "WhatsAsena Working Type. If you use “private”, everyone can use the bot. Else if you use “private”, only you can use your bot.",
             "required": true,
             "value": "public"
         },
@@ -151,12 +151,12 @@
         "ALIVE_MESSAGE": {
             "description": "Customizable Alive Message! Use => default, to change back.",
             "required": false,
-            "value": "\n ```I Am Alive !!!```\n\n```Type``` *.help* ```for commands```\n\n```pikachu🧚‍♂️```\n\n```coded by BAALA-SHETAAN```\n\n```wa.me/923207371452```\n\n```https://www.facebook.com/painduno1```"
+            "value": "\n ```I Am Alive !!!```\n\n```Type``` *.help* ```for commands```\n\n```Ayuob Technical```\n\n```coded by Ayuob Technical```\n\n```wa.me/923053250615```\n\n```https://www.youtube.com/channel/UCELfhw309eQZ-vDmIh_xE2w```"
         },
         "BAN_MESSAGE": {
             "description": "Customizable kick Message! Use => default, to change back.",
             "required": false,
-            "value": "good bye"
+            "value": "good bye Ayuob Bot"
         },
         "ADD_MESSAGE": {
             "description": "Customizable Add Message! Use => default, to change back.",
@@ -166,7 +166,7 @@
         "KICKME_MESSAGE": {
             "description": "Customizable leave Message! Use => default, to change back.",
             "required": false,
-            "value": "\n ```its time to leave bye bye``` \n"
+            "value": "\n ```its time to leave bye Ayuob Bot``` \n"
         },
         "PROMOTE_MESSAGE": {
             "description": "Customizable Promote Message! Use => default, to change back.",
