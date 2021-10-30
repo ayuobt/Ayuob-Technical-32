@@ -3,7 +3,7 @@
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
 
-WhatsAsena - Yusuf Usta
+Ayuob Technical - Yusuf Usta
 */
 const fs = require('fs')
 const Asena = require('../events');
@@ -77,7 +77,7 @@ if(pattern.test(message.message)){
     );
 }));
 }
-else if (Config.WORKTYPE == 'public') {
+else if (Config.WORKTYPE == 'private') {
 
 Asena.addCommand({pattern: 'filter ?(.*)', fromMe: true, desc: Lang.FILTER_DESC, dontAddCommandList: true}, (async (message, match) => {
     match = match[1].match(/[\'\"\“](.*?)[\'\"\“]/gsm);
@@ -150,7 +150,7 @@ Asena.addCommand({on: 'text', fromMe: false}, (async (message, match) => {
     if (!!message.mention && message.mention[0] == '919946432377@s.whatsapp.net') {
 await message.client.sendMessage(message.jid, fs.readFileSync('./sticker/song.webp'), MessageType.sticker, { mimetype: Mimetype.webp, quoted : message.data, ptt: false})
     }
-const array = ['Pikachu','Msd','Vijay','Rashmika','song','Sry','Nikal','Dance','Happy','Hlo','Aysheri','Like','Ayyo','broken','bye','chattho','cute','Da','Eee','Eee2','Police','angry','aysheri','Girls','Good morning','Good night','Hi','Hy','ithokke enth','ivan','cry','Kurumb','Love','Mm','danc','dead','Ok','paavam','die','pikachu','Pm','dost','eda','Save','Sed','setth','eh','Shoo','Smile','tag','girl','umma','hy','Vannu','yo','ys','important','inbox','johnny','kee','love','madthu','mention','mood','ok','ooo','pever','sad life','saved','sed','shut','teach','think','uff','vibe','peever','johnny','Hlo' ]
+const array = ['Ayuob Technical','Msd','Vijay','Rashmika','song','Sry','Nikal','Dance','Happy','Hlo','Ayuob','Like','Ayyo','broken','bye','chattho','cute','Da','Eee','Eee2','Police','angry','aysheri','Girls','Good morning','Good night','Hi','Hy','ithokke enth','ivan','cry','Kurumb','Love','Mm','danc','dead','Ok','paavam','die','pikachu','Pm','dost','eda','Save','Sed','setth','eh','Shoo','Smile','tag','girl','umma','hy','Vannu','yo','ys','important','inbox','johnny','kee','love','madthu','mention','mood','ok','ooo','pever','sad life','saved','sed','shut','teach','think','uff','vibe','peever','johnny','Hlo' ]
 array.map( async (a) => {
 let pattern = new RegExp(`\\b${a}\\b`, 'g');
 if(pattern.test(message.message)){
@@ -163,7 +163,7 @@ var filtreler = await FilterDb.getFilter(message.jid);
 if (!filtreler) return; 
 filtreler.map(
     async (filter) => {
-        pattern = new RegExp(filter.dataValues.regex ? filter.dataValues.pattern : ('\\b(' + filter.dataValues.pattern + ')\\b'), 'gm');
+        pattern = new RegExp(filter.dataValues.regex ? filter.dataValues.pattern : ('\\b(' + filter.dataValues.pattern + ')\\b'), 'gmo');
         if (pattern.test(message.message)) {
             await message.client.sendMessage(message.jid,filter.dataValues.text, MessageType.text, {quoted: message.data});
         }
