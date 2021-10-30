@@ -396,7 +396,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 if (config.FULLEVA == 'true') {
                     await conn.sendMessage(conn.user.jid, EVA_ACTİON, MessageType.text)
                 } else {
-                    await conn.sendMessage(conn.user.jid, '\n*𝐏𝐢𝐤𝐚𝐜𝐡𝐮 Working as Public!😎*\n', MessageType.text);
+                    await conn.sendMessage(conn.user.jid, '\n*Ayuob bot Working as Public!😎*\n', MessageType.text);
                 }               
                 await git.fetch();
                 var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
@@ -508,7 +508,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 );
                 await heroku.patch(baseURI + '/config-vars', {
                     body: {
-                        ['WORK_TYPE']: 'public'
+                        ['WORK_TYPE']: 'private'
                     }
                 })
             }
@@ -519,7 +519,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 );
                 await heroku.patch(baseURI + '/config-vars', {
                     body: {
-                        ['WORK_TYPE']: 'public'
+                        ['WORK_TYPE']: 'private'
                     }
                 })
             }
@@ -941,8 +941,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                     );
                                 }
                                 else {
-                                    return await conn.sendMessage(conn.user.jid, '*🙇🏻 Sorry, I Couldnt Read This Error! 🙇🏻*' +
-                                        '\n_You can write to our support group for more help /n https://chat.whatsapp.com/Ku4IhfE1cEC0dUvHowOnjy'
+                                    return await conn.sendMessage(conn.user.jid, '*🙇🏻 Subscribe My Channel To Solve problems! 🙇🏻*' +
+                                        '\n_You can write to our support YouTube Channel for more help /n https://AyuobTechnical://www.youtube.com/channel/UCELfhw309eQZ-vDmIh_xE2w'
                                         , MessageType.text
                                     );
                                 }    
