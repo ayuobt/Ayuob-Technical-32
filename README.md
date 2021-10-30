@@ -8,7 +8,7 @@
 <a href="#"><img title="Ayuob Technical" src="https://img.shields.io/badge/Ayuob Technical-red?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
 </p>
   <p align="center">
-<a href="https://https://www.youtube.com/channel/UCELfhw309eQZ-vDmIh_xE2w"><img title="Author" src="https://img.shields.io/badge/Author-Ayuob Technical/pikachu?color=blue&style=for-the-badge&logo=facebook"></a>
+<a href="https://https://www.youtube.com/channel/UCELfhw309eQZ-vDmIh_xE2w"><img title="Author" src="https://img.shields.io/badge/Author-Ayuob Technical/Ayuob?color=blue&style=for-the-badge&logo=facebook"></a>
 </p>
 </div>
 <p align="center">
@@ -111,10 +111,10 @@ By establishing the Asena, you are deemed to have accepted these responsibilitie
 ## Developers
   <div align="center">
     
-  [![Ayuob Technical](https://github.com/itxammy.png?size=100)](https://github.com/itxammy) |  [![YasirSial](https://github.com/YasirSial.png?size=100)](https://github.com/YasirSial) | [![EvilZeemi](https://github.com/EvilZeemi.png?size=100)](https://github.com/EvilZeemi) 
+  [![Ayuob Technical](https://github.com/itxammy.png?size=100)](https://github.com/itxammy) |  [![YasirSial](https://github.com/YasirSial.png?size=100)](https://github.com/Ayuob) | [![EvilZeemi](https://github.com/EvilZeemi.png?size=100)](https://github.com/EvilZeemi) 
 ----|----|----
-[Baala](https://github.com/itxammy)  | [Yasir Sial](https://github.com/YasirSial) | [Evil Zeemi](https://github.com/EvilZeemi)
-Base, Bug Fixes, Modules | Modifiying  as   public | Bug Fixes, Modules
+[Baala](https://github.com/itxammy)  | [Yasir Sial](https://github.com/Ayuob) | [Evil Zeemi](https://github.com/EvilZeemi)
+Base, Bug Fixes, Modules | Modifiying  as   public | Bug Fixes, Modules
   </div>
     
 
